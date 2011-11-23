@@ -7,8 +7,11 @@
     </string>
 
     <string name="changelog">
-        == Version 2.0 ==
-        \n\n * Now latest bootmenu is 1.0.7 (from cyanogenMod)
+        == Version 2.1 ==
+        \n\n * Has the latest bootmenu from cyanogenMod, 1.0.9 . Bundles with CWM recovery 5.0.3.3 .
+        \n * Now app fully ready for translation to other languages
+        \n\n== Version 2.0 ==
+        \n\n * Now has bootmenu is 1.0.7 (from cyanogenMod)
         \n * Using new static busybox.Smaller, newer, etc. Overall better than previous one
         \n * Better layout and resource externalization for pop-up dialog
         \n\n== Version 1.9 ==
@@ -66,6 +69,17 @@
     <string name="instructions_title">Instructions</string>
     
     <string name="stable_bootmenu">0.6.1 (Stable for CM-based ROMs)</string>
-    <string name="latest_bootmenu">1.0.7 (Latest version)</string>
-
+    <string name="latest_bootmenu">1.0.9 (Latest version)</string>
+    
+    <string name="success">Success.</string>
+    <string name="su_not_present">Couldn\'t obtain ROOT permissions. Is Superuser installed?</string>
+    <string name="enable_adb">USB debugging option is disabled. Please go to your phone settings and enable it before proceeding with install.</string>
+	<string name="snd_uninstalled_success">Uninstalled with success.</string>
+	<string name="snd_uninstalled_success_partial">Uninstalled with success, but only possible to do partial Uninstall.</string>
+	<string name="sndinstalled">2ndInit Recovery currently installed.</string>
+	<string name="snduninstalled">2ndInit Recovery NOT currently installed</string>
+	<string name="download_error">Download error. Try again.</string>
+	<string name="sndinit_not_installed_error">BootMenu was not installed already, so there\'s nothing else to do.</string>
+	<string name="version">Version</string>
+	    
 </resources>

@@ -49,9 +49,9 @@ public class MainActivity extends Activity implements View.OnClickListener
         AlertDialog.Builder alertbuilder = new AlertDialog.Builder(MainActivity.this);
 	    switch (item.getItemId()) {
 	    case OPTION_ABOUT:
-            alertbuilder.setTitle("About");
+            alertbuilder.setTitle(R.string.about_title);
             alertbuilder.setMessage(R.string.about);
-            alertbuilder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            alertbuilder.setPositiveButton(android.R.string.ok,new DialogInterface.OnClickListener(){
                public void onClick(DialogInterface dialog, int whichButton) {
                     //nothing
                }
@@ -59,9 +59,9 @@ public class MainActivity extends Activity implements View.OnClickListener
             alertbuilder.show();
 	        return true;
         case OPTION_CHANGELOG:
-            alertbuilder.setTitle("Changelog");
+            alertbuilder.setTitle(R.string.changelog_title);
             alertbuilder.setMessage(R.string.changelog);
-            alertbuilder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            alertbuilder.setPositiveButton(android.R.string.ok,new DialogInterface.OnClickListener(){
                public void onClick(DialogInterface dialog, int whichButton) {
                     //nothing
                }
@@ -69,9 +69,9 @@ public class MainActivity extends Activity implements View.OnClickListener
             alertbuilder.show();
 	        return true;
         case OPTION_INSTRUCTIONS:
-            alertbuilder.setTitle("Instructions");
+            alertbuilder.setTitle(R.string.instructions_title);
             alertbuilder.setMessage(R.string.instructions);
-            alertbuilder.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+            alertbuilder.setPositiveButton(android.R.string.ok,new DialogInterface.OnClickListener(){
                public void onClick(DialogInterface dialog, int whichButton) {
                     //nothing
                }
@@ -109,15 +109,15 @@ public class MainActivity extends Activity implements View.OnClickListener
         }
 
         TextView tv1 = (TextView) findViewById(R.id.tv_version);
-        tv1.setText("Version: "+result);
+        tv1.setText(getString(R.string.version)+" "+result);
 
         tv1 = (TextView) findViewById(R.id.tv_already_installed);
 
         if(ShellInterface.isBootmenuInstalled())
         {
-            tv1.setText("2ndInit Recovery currently installed.");
+            tv1.setText(R.string.sndinstalled);
         }else{
-            tv1.setText("2ndInit Recovery NOT currently installed.");
+            tv1.setText(R.string.snduninstalled);
         }
 
     }
@@ -156,7 +156,7 @@ public class MainActivity extends Activity implements View.OnClickListener
                         pdiag = new ProgressDialog(MainActivity.this);
                         pdiag.setMessage(getString(R.string.install_after_download));
                         pdiag.show();
-                        new DownloadFileTask().execute("http://dl.dropbox.com/u/668793/bootmenu/bootmenu.107.tar.gz");
+                        new DownloadFileTask().execute("http://dl.dropbox.com/u/668793/bootmenu/bootmenu.1.0.9.tar.gz");
                         diag.dismiss();
                     }
                 });
@@ -271,17 +271,17 @@ public class MainActivity extends Activity implements View.OnClickListener
                     e.printStackTrace();
                 }
 
-                Toast.makeText(MainActivity.this, "Success.", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.success, Toast.LENGTH_LONG).show();
 
                 return true;
             }
             else{
-                Toast.makeText(MainActivity.this, "Couldn't obtain ROOT permissions. Is Superuser installed?", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.su_not_present, Toast.LENGTH_LONG).show();
                 return false;
             }
         }
         else{
-            Toast.makeText(MainActivity.this, "USB debugging option is disabled. Please go to your phone settings and enable it before proceeding with install.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,R.string.enable_adb, Toast.LENGTH_LONG).show();
             return false;
         }
     }
@@ -292,9 +292,9 @@ public class MainActivity extends Activity implements View.OnClickListener
 
         if(ShellInterface.isBootmenuInstalled())
         {
-            tv1.setText("2ndInit Recovery currently installed.");
+            tv1.setText(R.string.sndinstalled);
         }else{
-            tv1.setText("2ndInit Recovery NOT currently installed.");
+            tv1.setText(R.string.snduninstalled);
         }
     }
 
@@ -318,7 +318,7 @@ public class MainActivity extends Activity implements View.OnClickListener
             if (result) //if download didn't got an error
                 installRecovery();
             else
-                Toast.makeText(MainActivity.this,"Download error. Try again.",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,R.string.download_error,Toast.LENGTH_LONG).show();
         }
     }
 
@@ -326,7 +326,7 @@ public class MainActivity extends Activity implements View.OnClickListener
     boolean uninstallRecovery()
     {
         if (!ShellInterface.isBootmenuInstalled()){
-            Toast.makeText(MainActivity.this, "BootMenu was not installed already, so there's nothing else to do.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, R.string.sndinit_not_installed_error, Toast.LENGTH_LONG).show();
             return true;
         }
         else
@@ -373,13 +373,13 @@ public class MainActivity extends Activity implements View.OnClickListener
             }
 
             if (partialUninstall==false)
-                Toast.makeText(MainActivity.this, "Uninstalled with success.", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.snd_uninstalled_success, Toast.LENGTH_LONG).show();
             else
-                Toast.makeText(MainActivity.this, "Uninstalled with success, but only possible to do partial Uninstall.", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.snd_uninstalled_success_partial, Toast.LENGTH_LONG).show();
             return true;
         }
         else{
-            Toast.makeText(MainActivity.this, "Couldn't obtain ROOT permissions. Is Superuser installed?", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, R.string.su_not_present, Toast.LENGTH_LONG).show();
             return false;
         }
     }
