@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  
+  <TextView android:id="@+id/tv_bootmenu_opts"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center_horizontal"
+  android:text="@string/bootmenu_options_header" />
+    
+  <Button android:id="@+id/btn_stable_bootmenu"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:padding="20dip"
+  android:layout_marginTop="10dip"
+  android:text="@string/stable_bootmenu" />
+  
+  <Button android:id="@+id/btn_dev_bootmenu"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:padding="20dip"
+  android:layout_marginTop="10dip"
+  android:text="@string/latest_bootmenu" />
+
+   <Button android:id="@+id/btn_own_bootmenu"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:padding="20dip"
+ android:layout_marginTop="10dip"
+  android:text="@string/bootmenu_own_url" />
+   
+   <TextView android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:padding="10dip"
+  android:text="---"/>
+  
+</LinearLayout>

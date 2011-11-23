@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Defy 2ndInit</string>
+
+    <string name="help_text">This is a free tool, used to install/uninstall the named \'BootMenu\' on Motorola Defy.\n
+        Press the \'menu\' key on your phone for credits and more instructions.
+    </string>
+
+    <string name="changelog">
+        == Version 2.0 ==
+        \n\n * Now latest bootmenu is 1.0.7 (from cyanogenMod)
+        \n * Using new static busybox.Smaller, newer, etc. Overall better than previous one
+        \n * Better layout and resource externalization for pop-up dialog
+        \n\n== Version 1.9 ==
+        \n\n * Install from custom URL now possible
+        \n * Added translation to Russian (contributed by _ReBoot_ )
+        \n\n== Version 1.8 ==
+        \n\n * Now users are able to choose between bootmenu versions they want to install
+        \n * By consequence the APK is smaller, since bootmenu versions rest on the web
+        \n * Ability to install custom bootmenu (for advanced users ONLY!)
+        \n * Updated to DEV version bootmenu v. 0.8.6
+        \n ** fix 2nd-init (support new 2.3.3 kernel)
+        \n ** add Clk4@Vsel4 (require new 2.3.3 kernel)
+        \n ** Bugfixes on scripts and CWM3
+        \n * Fixed cleanup after install
+        \n\n== Version 1.7 ==
+        \n\n * Updated to bootmenu v. 0.8.3
+        \n ** Bugfixes on scripts and CWM3
+        \n\n== Version 1.6 ==\n\n
+        \n * Added \'changelog\' and made separated \'instructions\' menu option
+        \n * Updated to bootmenu v. 0.8.0
+        \n ** add overclock. (Menu→System→Overclock)
+        \n ** bugs fixes.
+        \n ** script fixes.</string>
+
+    <string name="about">Thanks to ksubedi and \'ReverseAttack\' that made this possible,
+        and of course the whole XDA community :).\n\nReverseAttack\'s website: http://wiki.rvr.kr/android/bootmenu
+        \n\n A special thanks to the CyanogenDefy team as well for providing and maintaining newer bootmenu binaries.
+        \n\n This tool was coded by Pedro Veloso : pedro.n.veloso@gmail.com
+         \nI, the author, take no responsibility at all, in respect to everything that might or not happen.\n\n</string>
+
+    <string name="instructions">\n===HOW TO INSTALL ====\n\nPress the button to install the 2ndInit Recovery. Choose the apropriate bootmenu for you, (Stable if you want to Install CyanogenMOD or MIUI).
+        \nThe bootmenu will be download and installed. After it succeeds the top led will be green.
+        \n\n Then disable USB debugging on Phone settings, and then reboot. You\'ll boot into bootmenu already.
+        \n\nYou must choose your default boot option, or else you\'ll always boot to bootmenu first.
+        \n On each reboot when the led displays blue on startup press the key Volume Down to enter the BootMenu.
+        \n\nYou can use and redistribute this
+        tool freely, and I take no responsibility at all, in respect to everything that might happen :P. \n\n
+        \n\n===HOW TO USE CUSTOM URL===
+        \n\nYou must provide a tar.gz file with similar structure of the ones I use. You can even provide the
+        same bootmenus in different URLs, that is, mirror hosting. In case of doubt fell free to contact me.
+    </string>
+
+    <string name="bootmenu_options_header">Choose the version of Bootmenu you want to install. Please notice you require Internet connection for fetching the proper files.</string>
+
+    <string name="bootmenu_own_url">Use your own URL</string>
+
+    <string name="own_url_header">Only use this if you\'re an Advanced User. \nType your own URL below:</string>
+
+    <string name="install_after_download">Downloading... Will install after download is finished.</string>
+
+    <string name="ok">OK</string>
+
+    <string name="about_title">About</string>
+    <string name="changelog_title">Changelog</string>
+    <string name="instructions_title">Instructions</string>
+    
+    <string name="stable_bootmenu">0.6.1 (Stable for CM-based ROMs)</string>
+    <string name="latest_bootmenu">1.0.7 (Latest version)</string>
+
+</resources>

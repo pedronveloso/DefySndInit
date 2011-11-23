@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView android:id="@+id/tv_version" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:textStyle="bold" android:layout_centerHorizontal="true"/>
+
+    <TextView android:id="@+id/tv_already_installed" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tv_version"
+            android:textStyle="bold|italic" android:layout_centerHorizontal="true"/>
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_install_sndinit"
+    android:layout_marginTop="40dip" android:layout_below="@id/tv_already_installed"
+    android:layout_centerHorizontal="true"
+    android:text="Install 2ndInit Recovery" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_uninstall_sndinit"
+    android:layout_marginTop="40dip" android:layout_below="@id/btn_install_sndinit"
+    android:layout_centerHorizontal="true"
+    android:text="Uninstall 2ndInit Recovery" />
+
+
+    <TextView android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:text="@string/help_text"
+    android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+
